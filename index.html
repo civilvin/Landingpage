@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Policy Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Custom AI Policy in Minutes!</h1>
+        <p>Answer 10 simple questions to develop an AI policy tailored to your business for just $50. Get a detailed AI assessment as a next step.</p>
+        <form id="ai-policy-form">
+            <div class="form-step">
+                <label>What is your company’s primary industry?</label>
+                <input type="text" name="industry" required>
+            </div>
+            <div class="form-step">
+                <label>What specific AI applications are you currently using or planning to use?</label>
+                <input type="text" name="applications" required>
+            </div>
+            <div class="form-step">
+                <label>What are your main objectives for implementing AI?</label>
+                <input type="text" name="objectives" required>
+            </div>
+            <div class="form-step">
+                <label>How many employees will interact with AI systems?</label>
+                <input type="number" name="employees" required>
+            </div>
+            <div class="form-step">
+                <label>What data privacy concerns do you have?</label>
+                <input type="text" name="privacy_concerns" required>
+            </div>
+            <div class="form-step">
+                <label>What regulatory requirements are you subject to?</label>
+                <input type="text" name="regulatory_requirements" required>
+            </div>
+            <div class="form-step">
+                <label>How do you plan to handle AI-related ethical issues?</label>
+                <input type="text" name="ethical_issues" required>
+            </div>
+            <div class="form-step">
+                <label>What is your budget for AI implementation and maintenance?</label>
+                <input type="text" name="budget" required>
+            </div>
+            <div class="form-step">
+                <label>What level of AI transparency is important to you?</label>
+                <input type="text" name="transparency" required>
+            </div>
+            <div class="form-step">
+                <label>Do you have existing AI policies or guidelines?</label>
+                <input type="text" name="existing_policies" required>
+            </div>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </form>
+        <div id="payment-container" style="display: none;">
+            <h2>Payment</h2>
+            <p>Pay $50 to get your custom AI policy.</p>
+            <button id="payBtn">Pay with Stripe</button>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
